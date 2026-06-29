@@ -118,22 +118,56 @@ export const translations = {
         {
           title: "Repset",
           category: "B2B SaaS / Gym management",
+          status: "Live",
+          summary:
+            "All-in-one gym management platform covering session booking, membership tracking, and coach scheduling. Taken from first commit to live production in under 3 months with zero marketing spend.",
+          metrics: [
+            { value: "3", label: "paying partners" },
+            { value: "68%", label: "D60 retention" },
+            { value: "50+", label: "active users" },
+          ],
           tools: "React, Node.js, SQL, Firebase, DigitalOcean CI/CD",
+          tags: ["React", "Node.js", "Firebase", "SQL", "DigitalOcean CI/CD"],
         },
         {
           title: "Madinah Innovators",
           category: "Software delivery studio",
+          status: "Completed",
+          summary:
+            "Built and led a 6-person cross-functional studio delivering 10+ B2B mandates across 6 countries. Introduced sprint cadences, shared CI/CD pipelines, and a real-time risk dashboard without increasing headcount.",
+          metrics: [
+            { value: "10+", label: "B2B clients" },
+            { value: "60→80%", label: "on-time delivery" },
+            { value: "-30%", label: "cycle time" },
+          ],
           tools: "React, Laravel, Flutter, Make, n8n, shared CI/CD pipelines",
+          tags: ["Product strategy", "Sprint planning", "Stakeholder mgmt", "6 countries"],
         },
         {
           title: "Clevory",
           category: "Cross-platform e-learning app",
+          status: "Completed",
+          summary:
+            "Built and shipped a cross-platform e-learning app for university and corporate training at ZEENOVI. Owned content delivery and authentication flows end-to-end, from spec to production.",
+          metrics: [
+            { value: "2", label: "platforms" },
+            { value: "5 mo", label: "delivery" },
+          ],
           tools: "Flutter, Dart, Firebase, authentication, content delivery",
+          tags: ["Flutter", "Dart", "Firebase", "Authentication", "Content delivery"],
         },
         {
-          title: "Automation Systems",
+          title: "Workflow Automation",
           category: "Client operations",
+          status: "Ongoing",
+          summary:
+            "Identified recurring manual-process bottlenecks across B2B client accounts and shipped Make/n8n automation workflows to close them, removing operational friction without expanding engineering headcount.",
+          metrics: [
+            { value: "Make", label: "platform" },
+            { value: "n8n", label: "platform" },
+          ],
           tools: "Make, n8n, workflow design, stakeholder reporting",
+          tags: ["Make (Integromat)", "n8n", "Workflow design", "Stakeholder mgmt"],
         },
       ],
     },
@@ -261,22 +295,56 @@ export const translations = {
         {
           title: "Repset",
           category: "SaaS B2B / gestion de salles de sport",
+          status: "En ligne",
+          summary:
+            "Plateforme tout-en-un de gestion de salle de sport couvrant la réservation de sessions, le suivi des abonnés et la planification des coachs. Lancée en production en moins de 3 mois avec zéro budget marketing.",
+          metrics: [
+            { value: "3", label: "partenaires payants" },
+            { value: "68%", label: "rétention D60" },
+            { value: "50+", label: "utilisateurs actifs" },
+          ],
           tools: "React, Node.js, SQL, Firebase, CI/CD DigitalOcean",
+          tags: ["React", "Node.js", "Firebase", "SQL", "CI/CD DigitalOcean"],
         },
         {
           title: "Madinah Innovators",
           category: "Studio de livraison logicielle",
+          status: "Terminé",
+          summary:
+            "Construction et direction d'un studio cross-fonctionnel de 6 personnes livrant 10+ mandats B2B dans 6 pays. Mise en place de sprints, pipelines CI/CD partagés et tableau de bord des risques en temps réel.",
+          metrics: [
+            { value: "10+", label: "clients B2B" },
+            { value: "60→80%", label: "livraison à temps" },
+            { value: "-30%", label: "cycle" },
+          ],
           tools: "React, Laravel, Flutter, Make, n8n, pipelines CI/CD partagés",
+          tags: ["Stratégie produit", "Planification sprint", "Stakeholder mgmt", "6 pays"],
         },
         {
           title: "Clevory",
           category: "Application e-learning multiplateforme",
+          status: "Terminé",
+          summary:
+            "Construction et livraison d'une application e-learning multiplateforme pour la formation universitaire et d'entreprise chez ZEENOVI. Responsable des flux de contenu et d'authentification de bout en bout.",
+          metrics: [
+            { value: "2", label: "plateformes" },
+            { value: "5 mois", label: "livraison" },
+          ],
           tools: "Flutter, Dart, Firebase, authentification, livraison de contenu",
+          tags: ["Flutter", "Dart", "Firebase", "Authentification", "Livraison de contenu"],
         },
         {
-          title: "Automation Systems",
+          title: "Workflow Automation",
           category: "Opérations client",
+          status: "En cours",
+          summary:
+            "Identification de goulets d'étranglement récurrents dans les processus manuels de comptes B2B et livraison de workflows Make/n8n pour réduire les frictions opérationnelles sans augmenter les effectifs.",
+          metrics: [
+            { value: "Make", label: "plateforme" },
+            { value: "n8n", label: "plateforme" },
+          ],
           tools: "Make, n8n, conception de workflows, reporting parties prenantes",
+          tags: ["Make (Integromat)", "n8n", "Workflow design", "Stakeholder mgmt"],
         },
       ],
     },
@@ -404,22 +472,56 @@ export const translations = {
         {
           title: "Repset",
           category: "B2B SaaS / Gym-Management",
+          status: "Live",
+          summary:
+            "Alles-in-einem Gym-Management-Plattform für Session-Buchung, Mitgliederverwaltung und Coach-Scheduling. In unter 3 Monaten von Null auf Live-Produktion gebracht, ohne Marketingbudget.",
+          metrics: [
+            { value: "3", label: "zahlende Partner" },
+            { value: "68%", label: "D60-Retention" },
+            { value: "50+", label: "aktive Nutzer" },
+          ],
           tools: "React, Node.js, SQL, Firebase, DigitalOcean CI/CD",
+          tags: ["React", "Node.js", "Firebase", "SQL", "DigitalOcean CI/CD"],
         },
         {
           title: "Madinah Innovators",
           category: "Software-Delivery-Studio",
+          status: "Abgeschlossen",
+          summary:
+            "Aufbau und Leitung eines 6-köpfigen cross-funktionalen Studios, das 10+ B2B-Mandate in 6 Ländern lieferte. Einführung von Sprint-Rhythmen, gemeinsamen CI/CD-Pipelines und Echtzeit-Risikodashboard.",
+          metrics: [
+            { value: "10+", label: "B2B-Kunden" },
+            { value: "60→80%", label: "pünktliche Lieferung" },
+            { value: "-30%", label: "Durchlaufzeit" },
+          ],
           tools: "React, Laravel, Flutter, Make, n8n, gemeinsame CI/CD-Pipelines",
+          tags: ["Produktstrategie", "Sprintplanung", "Stakeholder mgmt", "6 Länder"],
         },
         {
           title: "Clevory",
           category: "Plattformübergreifende E-Learning-App",
+          status: "Abgeschlossen",
+          summary:
+            "Baute und lieferte eine plattformübergreifende E-Learning-App für Universitäts- und Unternehmensschulung bei ZEENOVI. Verantwortlich für Content-Delivery und Authentifizierungsflüsse von Ende zu Ende.",
+          metrics: [
+            { value: "2", label: "Plattformen" },
+            { value: "5 Mo", label: "Lieferung" },
+          ],
           tools: "Flutter, Dart, Firebase, Authentifizierung, Content-Delivery",
+          tags: ["Flutter", "Dart", "Firebase", "Authentifizierung", "Content-Delivery"],
         },
         {
-          title: "Automation Systems",
+          title: "Workflow Automation",
           category: "Client Operations",
+          status: "Laufend",
+          summary:
+            "Identifizierte wiederkehrende manuelle Prozessengpässe bei B2B-Kunden und lieferte Make/n8n-Automatisierungsworkflows, um operative Reibung ohne zusätzliche Engineering-Kapazität zu reduzieren.",
+          metrics: [
+            { value: "Make", label: "Plattform" },
+            { value: "n8n", label: "Plattform" },
+          ],
           tools: "Make, n8n, Workflow-Design, Stakeholder-Management",
+          tags: ["Make (Integromat)", "n8n", "Workflow-Design", "Stakeholder mgmt"],
         },
       ],
     },
