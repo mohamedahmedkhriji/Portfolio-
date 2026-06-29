@@ -1,11 +1,33 @@
 import { useCallback, useEffect, useState } from "react";
 import "./styles/Loading.css";
+import { useLanguage } from "../context/LanguageProvider";
 import { useLoading } from "../context/LoadingProvider";
 
 import Marquee from "react-fast-marquee";
 
+const logoItems = [
+  { name: "Agile", file: "agile.png" },
+  { name: "Anaconda", file: "anaconda.png" },
+  { name: "Angular", file: "angular.png" },
+  { name: "Firebase", file: "firebase.webp" },
+  { name: "Flutter", file: "flutter.jpg" },
+  { name: "Jira", file: "jira.jpg" },
+  { name: "MongoDB", file: "mongo.jpg" },
+  { name: "MySQL", file: "mysql.jpg" },
+  { name: "Node.js", file: "node.jpg" },
+  { name: "Power BI", file: "powerbi.jpg" },
+  { name: "Python", file: "python.png" },
+  { name: "React", file: "react.png" },
+].map((logo) => ({
+  ...logo,
+  src: new URL(`../../assets/logos/${logo.file}`, import.meta.url).href,
+}));
+
+const marqueeLogos = [...logoItems, ...logoItems];
+
 const Loading = ({ percent }: { percent: number }) => {
   const { setIsLoading, setLoading } = useLoading();
+  const { t } = useLanguage();
   const [loaded, setLoaded] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [clicked, setClicked] = useState(false);
@@ -69,9 +91,6 @@ const Loading = ({ percent }: { percent: number }) => {
   return (
     <>
       <div className="loading-header">
-        <a href="/#" className="loader-title" data-cursor="disable">
-          KMA
-        </a>
         <div className={`loaderGame ${clicked && "loader-out"}`}>
           <div className="loaderGame-container">
             <div className="loaderGame-in">
@@ -84,15 +103,16 @@ const Loading = ({ percent }: { percent: number }) => {
         </div>
       </div>
       <div className="loading-screen">
-        <div className="loading-marquee">
-          <Marquee>
-            <span> B2B SaaS Product Manager</span>
-            <span> Founder and Builder</span>
-            <span> React / Node.js / Flutter</span>
-            <span> B2B SaaS Product Manager</span>
-            <span> Founder and Builder</span>
-            <span> React / Node.js / Flutter</span>
-          </Marquee>
+        <div className="brand-section-area logo-strip">
+          <div className="marquee-wrap">
+            <Marquee className="marquee-text" speed={42} gradient={false}>
+              {marqueeLogos.map((logo, index) => (
+                <div className="brand-single-box" key={`${logo.name}-${index}`}>
+                  <img className="logo-icon mx-6" src={logo.src} alt={logo.name} />
+                </div>
+              ))}
+            </Marquee>
+          </div>
         </div>
         <div
           className={`loading-wrap ${clicked && "loading-clicked"}`}
@@ -106,20 +126,20 @@ const Loading = ({ percent }: { percent: number }) => {
           }}
           role="button"
           tabIndex={0}
-          aria-label="Enter portfolio"
+          aria-label={t.common.welcome}
         >
           <div className="loading-hover"></div>
           <div className={`loading-button ${loaded && "loading-complete"}`}>
             <div className="loading-container">
               <div className="loading-content">
                 <div className="loading-content-in">
-                  Loading <span>{percent}%</span>
+                  {t.common.loading} <span>{percent}%</span>
                 </div>
               </div>
               <div className="loading-box"></div>
             </div>
             <div className="loading-content2">
-              <span>Welcome</span>
+              <span>{t.common.welcome}</span>
             </div>
           </div>
         </div>
@@ -135,7 +155,7 @@ export const setProgress = (setLoading: (value: number) => void) => {
 
   let interval = setInterval(() => {
     if (percent <= 50) {
-      let rand = Math.round(Math.random() * 5);
+      const rand = Math.round(Math.random() * 5);
       percent = percent + rand;
       setLoading(percent);
     } else {

@@ -3,12 +3,39 @@ import {
   FaLinkedinIn,
   FaEnvelope,
 } from "react-icons/fa6";
+import { SiCalendly } from "react-icons/si";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
 import HoverLinks from "./HoverLinks";
+import { useLanguage } from "../context/LanguageProvider";
+
+const CALENDLY_URL = "https://calendly.com/khrijimohamedahmed";
 
 const SocialIcons = () => {
+  const { t } = useLanguage();
+
+  useEffect(() => {
+    const stylesheetId = "calendly-widget-css";
+    const scriptId = "calendly-widget-js";
+
+    if (!document.getElementById(stylesheetId)) {
+      const link = document.createElement("link");
+      link.id = stylesheetId;
+      link.rel = "stylesheet";
+      link.href = "https://assets.calendly.com/assets/external/widget.css";
+      document.head.appendChild(link);
+    }
+
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement("script");
+      script.id = scriptId;
+      script.src = "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   useEffect(() => {
     const social = document.getElementById("social") as HTMLElement;
 
@@ -55,6 +82,16 @@ const SocialIcons = () => {
     });
   }, []);
 
+  const openCalendly = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({ url: CALENDLY_URL });
+    } else {
+      window.open(CALENDLY_URL, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
@@ -73,9 +110,20 @@ const SocialIcons = () => {
             <FaEnvelope />
           </a>
         </span>
+        <span>
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={t.social.calendly}
+            onClick={openCalendly}
+          >
+            <SiCalendly />
+          </a>
+        </span>
       </div>
       <a className="resume-button" href="/Khriji_Mohamed_Ahmed_PM_v5__.pdf">
-        <HoverLinks text="RESUME" />
+        <HoverLinks text={t.social.resume} />
         <span>
           <TbNotes />
         </span>

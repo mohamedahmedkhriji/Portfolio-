@@ -10,6 +10,7 @@ import {
   CylinderCollider,
   RapierRigidBody,
 } from "@react-three/rapier";
+import { useLanguage } from "../context/LanguageProvider";
 
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
@@ -125,6 +126,7 @@ function Pointer({ vec = new THREE.Vector3(), isActive }: PointerProps) {
 }
 
 const TechStack = () => {
+  const { t } = useLanguage();
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -168,7 +170,7 @@ const TechStack = () => {
 
   return (
     <div className="techstack">
-      <h2> My Techstack</h2>
+      <h2>{t.techStack.title}</h2>
 
       <Canvas
         shadows

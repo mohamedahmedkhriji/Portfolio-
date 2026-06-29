@@ -186,18 +186,13 @@
   position: fixed;
   z-index: 9999999999;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   box-sizing: border-box;
   padding: 20px 0px;
   left: 50%;
   transform: translateX(-50%);
   top: 0;
   color: var(--backgroundColor);
-}
-.loader-title {
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.2px;
 }
 @keyframes blink {
   0% {
@@ -278,31 +273,59 @@
   transform: translateY(10px);
   animation-timing-function: cubic-bezier(0.3, 1.18, 0.63, 1.28);
 }
-.loading-marquee {
+.brand-section-area.logo-strip {
   position: absolute;
   top: 50%;
   left: 0;
   width: 100%;
   transform: translateY(-50%);
-  color: var(--backgroundColor);
-  font-size: 60px;
-  font-weight: 600;
-  text-transform: uppercase;
+  pointer-events: none;
+  overflow: hidden;
 }
-.loading-marquee span {
-  padding: 0px 50px;
-  position: relative;
+
+.marquee-wrap {
+  width: 100%;
+  overflow: hidden;
 }
-.loading-marquee span::before {
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-color: var(--backgroundColor);
-  position: absolute;
-  top: 50%;
-  border-radius: 50px;
-  left: 0px;
-  transform: translate(-50%, -50%);
+
+.marquee-text {
+  align-items: center;
+}
+
+.brand-single-box {
+  width: clamp(120px, 12vw, 180px);
+  height: clamp(58px, 7vw, 90px);
+  margin: 0 clamp(22px, 3.4vw, 56px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.logo-icon {
+  max-width: 100%;
+  max-height: 62px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .brand-single-box {
+    width: 110px;
+    height: 62px;
+    margin: 0 24px;
+  }
+
+  .logo-icon {
+    max-height: 46px;
+  }
 }
 @keyframes ball25 {
   0% {
@@ -342,23 +365,14 @@
   .loading-container {
     left: 70px;
   }
-  .loading-marquee {
-    font-size: 100px;
-  }
 }
 @media only screen and (min-width: 500px) {
   .loading-header {
     padding: 20px 0px;
   }
-  .loader-title {
-    font-size: 16px;
-  }
 }
 @media only screen and (min-width: 1200px) {
   .loading-header {
     padding: 35px 0px;
-  }
-  .loader-title {
-    font-size: 18px;
   }
 }

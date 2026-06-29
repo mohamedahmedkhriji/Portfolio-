@@ -3,38 +3,38 @@ import WorkImage from "./WorkImage";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { useLanguage } from "../context/LanguageProvider";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-const projects = [
+const projectImages = {
+  repset: new URL("../../assets/projects/repset logo .jpg", import.meta.url).href,
+  madinah: new URL("../../assets/projects/madinnah innovators.png", import.meta.url)
+    .href,
+  clevory: new URL("../../assets/projects/claivory training.png", import.meta.url)
+    .href,
+  automation: new URL("../../assets/projects/autmation.png", import.meta.url).href,
+};
+
+const projectMeta = [
   {
-    title: "Repset",
-    category: "B2B SaaS / Gym management",
-    tools: "React, Node.js, SQL, Firebase, DigitalOcean CI/CD",
-    image: "/images/repset.png",
+    image: projectImages.repset,
     link: "https://repset.org",
   },
   {
-    title: "Madinah Innovators",
-    category: "Software delivery studio",
-    tools: "React, Laravel, Flutter, Make, n8n, shared CI/CD pipelines",
-    image: "/images/madinah.png",
+    image: projectImages.madinah,
   },
   {
-    title: "Clevory",
-    category: "Cross-platform e-learning app",
-    tools: "Flutter, Dart, Firebase, authentication, content delivery",
-    image: "/images/clevory.png",
+    image: projectImages.clevory,
   },
   {
-    title: "Automation Systems",
-    category: "Client operations",
-    tools: "Make, n8n, workflow design, stakeholder reporting",
-    image: "/images/automation.png",
+    image: projectImages.automation,
   },
 ];
 
 const Work = () => {
+  const { t } = useLanguage();
+
   useGSAP(() => {
     let translateX: number = 0;
 
@@ -77,10 +77,10 @@ const Work = () => {
     <div className="work-section" id="work">
       <div className="work-container section-container">
         <h2>
-          My <span>Work</span>
+          {t.work.titleStart} <span>{t.work.titleAccent}</span>
         </h2>
         <div className="work-flex">
-          {projects.map((project, index) => (
+          {t.work.projects.map((project, index) => (
             <div className="work-box" key={index}>
               <div className="work-info">
                 <div className="work-title">
@@ -91,10 +91,14 @@ const Work = () => {
                     <p>{project.category}</p>
                   </div>
                 </div>
-                <h4>Tools and features</h4>
+                <h4>{t.work.toolsLabel}</h4>
                 <p>{project.tools}</p>
               </div>
-              <WorkImage image={project.image} alt={project.title} link={project.link} />
+              <WorkImage
+                image={projectMeta[index].image}
+                alt={project.title}
+                link={projectMeta[index].link}
+              />
             </div>
           ))}
         </div>

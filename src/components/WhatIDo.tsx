@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
+import { useLanguage } from "../context/LanguageProvider";
 import "./styles/WhatIDo.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const WhatIDo = () => {
+  const { t } = useLanguage();
   const containerRef = useRef<(HTMLDivElement | null)[]>([]);
   const setRef = (el: HTMLDivElement | null, index: number) => {
     containerRef.current[index] = el;
@@ -28,9 +30,11 @@ const WhatIDo = () => {
     <div className="whatIDO">
       <div className="what-box">
         <h2 className="title">
-          W<span className="hat-h2">HAT</span>
+          {t.what.titlePrefix}
+          <span className="hat-h2">{t.what.titleRest}</span>
           <div>
-            I<span className="do-h2"> DO</span>
+            {t.what.titleLine2Prefix}
+            <span className="do-h2">{t.what.titleLine2Rest}</span>
           </div>
         </h2>
       </div>
@@ -87,22 +91,16 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>PRODUCT</h3>
-              <h4>Description</h4>
-              <p>
-                I turn ambiguous B2B problems into scoped product bets,
-                roadmaps, MVPs, and release plans that teams can actually ship.
-              </p>
-              <h5>Skillset & tools</h5>
+              <h3>{t.what.cards[0].title}</h3>
+              <h4>{t.what.description}</h4>
+              <p>{t.what.cards[0].body}</p>
+              <h5>{t.what.tools}</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Agile</div>
-                <div className="what-tags">Scrum</div>
-                <div className="what-tags">Roadmaps</div>
-                <div className="what-tags">Backlogs</div>
-                <div className="what-tags">Sprint Planning</div>
-                <div className="what-tags">Stakeholder Reporting</div>
-                <div className="what-tags">Risk Tracking</div>
-                <div className="what-tags">B2B Clients</div>
+                {t.what.cards[0].tags.map((tag) => (
+                  <div className="what-tags" key={tag}>
+                    {tag}
+                  </div>
+                ))}
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -126,22 +124,16 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>BUILD</h3>
-              <h4>Description</h4>
-              <p>
-                I code directly with engineering teams, which keeps delivery
-                tight and removes the hand-off layer between product and build.
-              </p>
-              <h5>Skillset & tools</h5>
+              <h3>{t.what.cards[1].title}</h3>
+              <h4>{t.what.description}</h4>
+              <p>{t.what.cards[1].body}</p>
+              <h5>{t.what.tools}</h5>
               <div className="what-content-flex">
-                <div className="what-tags">React</div>
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Laravel</div>
-                <div className="what-tags">Flutter</div>
-                <div className="what-tags">Firebase</div>
-                <div className="what-tags">SQL</div>
-                <div className="what-tags">CI/CD</div>
-                <div className="what-tags">DigitalOcean</div>
+                {t.what.cards[1].tags.map((tag) => (
+                  <div className="what-tags" key={tag}>
+                    {tag}
+                  </div>
+                ))}
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -165,23 +157,16 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>OPERATE</h3>
-              <h4>Description</h4>
-              <p>
-                I have founded, hired for, and managed software delivery
-                operations, from compliance to sprint cadences and client
-                communication.
-              </p>
-              <h5>Skillset & tools</h5>
+              <h3>{t.what.cards[2].title}</h3>
+              <h4>{t.what.description}</h4>
+              <p>{t.what.cards[2].body}</p>
+              <h5>{t.what.tools}</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Hiring</div>
-                <div className="what-tags">Team Management</div>
-                <div className="what-tags">Tax Compliance</div>
-                <div className="what-tags">Jira</div>
-                <div className="what-tags">Trello</div>
-                <div className="what-tags">Clockify</div>
-                <div className="what-tags">Make</div>
-                <div className="what-tags">n8n</div>
+                {t.what.cards[2].tags.map((tag) => (
+                  <div className="what-tags" key={tag}>
+                    {tag}
+                  </div>
+                ))}
               </div>
               <div className="what-arrow"></div>
             </div>

@@ -15,11 +15,13 @@ import Navbar from "./Navbar";
 import SocialIcons from "./SocialIcons";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
+import { useLanguage } from "../context/LanguageProvider";
 import setSplitText from "./utils/splitText";
 
 const TechStack = lazy(() => import("./TechStack"));
 
 const MainContainer = ({ children }: PropsWithChildren) => {
+  const { language, t } = useLanguage();
   const [isDesktopView, setIsDesktopView] = useState<boolean>(
     window.innerWidth > 1024
   );
@@ -55,6 +57,14 @@ const MainContainer = ({ children }: PropsWithChildren) => {
     return () => observer.disconnect();
   }, [isDesktopView, shouldLoadTechStack]);
 
+  useEffect(() => {
+    const splitTextUpdate = window.setTimeout(() => {
+      setSplitText();
+    }, 0);
+
+    return () => window.clearTimeout(splitTextUpdate);
+  }, [language]);
+
   return (
     <div className="container-main">
       <Cursor />
@@ -71,7 +81,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
             <Work />
             <div ref={techStackRef}>
               {isDesktopView && shouldLoadTechStack && (
-                <Suspense fallback={<div>Loading....</div>}>
+                <Suspense fallback={<div>{t.common.loading}....</div>}>
                   <TechStack />
                 </Suspense>
               )}

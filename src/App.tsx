@@ -3,20 +3,23 @@ import "./App.css";
 
 const CharacterModel = lazy(() => import("./components/Character"));
 const MainContainer = lazy(() => import("./components/MainContainer"));
+import { LanguageProvider } from "./context/LanguageProvider";
 import { LoadingProvider } from "./context/LoadingProvider";
 
 const App = () => {
   return (
     <>
-      <LoadingProvider>
-        <Suspense>
-          <MainContainer>
-            <Suspense>
-              <CharacterModel />
-            </Suspense>
-          </MainContainer>
-        </Suspense>
-      </LoadingProvider>
+      <LanguageProvider>
+        <LoadingProvider>
+          <Suspense>
+            <MainContainer>
+              <Suspense>
+                <CharacterModel />
+              </Suspense>
+            </MainContainer>
+          </Suspense>
+        </LoadingProvider>
+      </LanguageProvider>
     </>
   );
 };
