@@ -131,10 +131,10 @@ export const translations = {
         },
         {
           title: "Madinah Innovators",
-          category: "Software delivery studio",
+          category: "Software delivery studio / CEO and PM",
           status: "Completed",
           summary:
-            "Built and led a 6-person cross-functional studio delivering 10+ B2B mandates across 6 countries. Introduced sprint cadences, shared CI/CD pipelines, and a real-time risk dashboard without increasing headcount.",
+            "Built and led a 6-person cross-functional studio delivering 10+ B2B mandates across 6 countries. Introduced sprint cadences, shared CI/CD pipelines, and a real-time risk dashboard with no headcount increase.",
           metrics: [
             { value: "10+", label: "B2B clients" },
             { value: "60→80%", label: "on-time delivery" },
@@ -145,10 +145,10 @@ export const translations = {
         },
         {
           title: "Clevory",
-          category: "Cross-platform e-learning app",
+          category: "Cross-platform e-learning app / Software engineer intern",
           status: "Completed",
           summary:
-            "Built and shipped a cross-platform e-learning app for university and corporate training at ZEENOVI. Owned content delivery and authentication flows end-to-end, from spec to production.",
+            "Built and shipped a cross-platform e-learning app for university and corporate training at ZEENOVI. Owned core content delivery and authentication flows end-to-end, from spec to production. Identified and resolved a content-loading bottleneck improving performance on low-end devices.",
           metrics: [
             { value: "2", label: "platforms" },
             { value: "5 mo", label: "delivery" },
@@ -158,10 +158,10 @@ export const translations = {
         },
         {
           title: "Workflow Automation",
-          category: "Client operations",
+          category: "IT consulting / Process automation",
           status: "Ongoing",
           summary:
-            "Identified recurring manual-process bottlenecks across B2B client accounts and shipped Make/n8n automation workflows to close them, removing operational friction without expanding engineering headcount.",
+            "Identified recurring manual-process bottlenecks across B2B client accounts and shipped Make/n8n automation workflows to close them, removing operational friction and creating upsell opportunities without expanding engineering headcount.",
           metrics: [
             { value: "Make", label: "platform" },
             { value: "n8n", label: "platform" },

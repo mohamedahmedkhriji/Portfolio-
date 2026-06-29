@@ -7,28 +7,60 @@ import { useLanguage } from "../context/LanguageProvider";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-const projectImages = {
-  repset: new URL("../../assets/projects/repset logo .jpg", import.meta.url).href,
-  madinah: new URL("../../assets/projects/madinnah innovators.png", import.meta.url)
-    .href,
-  clevory: new URL("../../assets/projects/claivory training.png", import.meta.url)
-    .href,
-  automation: new URL("../../assets/projects/autmation.png", import.meta.url).href,
+const loadProjectImages = (modules: Record<string, string>) => {
+  return Object.entries(modules)
+    .sort(([first], [second]) => first.localeCompare(second))
+    .map(([, image]) => image);
 };
 
 const projectMeta = [
   {
-    image: projectImages.repset,
+    images: loadProjectImages(
+      import.meta.glob<string>("../../assets/project/repset/*.{png,jpg,jpeg,webp}", {
+        eager: true,
+        import: "default",
+        query: "?url",
+      })
+    ),
     link: "https://repset.org",
+    links: [
+      { label: "repset.org", href: "https://repset.org/" },
+      { label: "Instagram", href: "https://www.instagram.com/repset_app" },
+      { label: "TikTok", href: "https://www.tiktok.com/@repset_app" },
+    ],
   },
   {
-    image: projectImages.madinah,
+    images: loadProjectImages(
+      import.meta.glob<string>(
+        "../../assets/project/madinnah innovators/*.{png,jpg,jpeg,webp}",
+        {
+          eager: true,
+          import: "default",
+          query: "?url",
+        }
+      )
+    ),
   },
   {
-    image: projectImages.clevory,
+    images: loadProjectImages(
+      import.meta.glob<string>("../../assets/project/clevory/*.{png,jpg,jpeg,webp}", {
+        eager: true,
+        import: "default",
+        query: "?url",
+      })
+    ),
   },
   {
-    image: projectImages.automation,
+    images: loadProjectImages(
+      import.meta.glob<string>(
+        "../../assets/project/automation/*.{png,jpg,jpeg,webp}",
+        {
+          eager: true,
+          import: "default",
+          query: "?url",
+        }
+      )
+    ),
   },
 ];
 
@@ -83,21 +115,51 @@ const Work = () => {
           {t.work.projects.map((project, index) => (
             <div className="work-box" key={index}>
               <div className="work-info">
+                <div className="work-card-top">
+                  <span className="work-status">{project.status}</span>
+                  <span className="work-number">0{index + 1}</span>
+                </div>
                 <div className="work-title">
-                  <h3>0{index + 1}</h3>
-
                   <div>
                     <h4>{project.title}</h4>
                     <p>{project.category}</p>
                   </div>
                 </div>
-                <h4>{t.work.toolsLabel}</h4>
-                <p>{project.tools}</p>
+                <p className="work-summary">{project.summary}</p>
+                <div className="work-metrics">
+                  {project.metrics.map((metric) => (
+                    <div className="work-metric" key={`${project.title}-${metric.label}`}>
+                      <strong>{metric.value}</strong>
+                      <span>{metric.label}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="work-tags" aria-label={t.work.toolsLabel}>
+                  {project.tags.map((tag) => (
+                    <span key={`${project.title}-${tag}`}>{tag}</span>
+                  ))}
+                </div>
+                {projectMeta[index].links && (
+                  <div className="work-socials">
+                    {projectMeta[index].links?.map((link) => (
+                      <a
+                        href={link.href}
+                        key={link.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        data-cursor="disable"
+                      >
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
               <WorkImage
-                image={projectMeta[index].image}
+                images={projectMeta[index].images}
                 alt={project.title}
                 link={projectMeta[index].link}
+                links={projectMeta[index].links}
               />
             </div>
           ))}

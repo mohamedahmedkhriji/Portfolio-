@@ -1,43 +1,59 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
 
 interface Props {
-  image: string;
+  images: string[];
   alt?: string;
-  video?: string;
   link?: string;
+  links?: {
+    label: string;
+    href: string;
+  }[];
 }
 
 const WorkImage = (props: Props) => {
-  const [isVideo, setIsVideo] = useState(false);
-  const [video, setVideo] = useState("");
-  const handleMouseEnter = async () => {
-    if (props.video) {
-      setIsVideo(true);
-      const response = await fetch(`src/assets/${props.video}`);
-      const blob = await response.blob();
-      const blobUrl = URL.createObjectURL(blob);
-      setVideo(blobUrl);
+  const [isHovering, setIsHovering] = useState(false);
+  const [activeImage, setActiveImage] = useState(0);
+  const images = props.images.length > 0 ? props.images : [];
+  const primaryLink = props.link ?? props.links?.[0]?.href;
+
+  useEffect(() => {
+    if (!isHovering || images.length < 2) {
+      setActiveImage(0);
+      return;
     }
-  };
+
+    const rotation = window.setInterval(() => {
+      setActiveImage((current) => (current + 1) % images.length);
+    }, 950);
+
+    return () => window.clearInterval(rotation);
+  }, [images.length, isHovering]);
 
   return (
     <div className="work-image">
       <a
         className="work-image-in"
-        href={props.link}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={() => setIsVideo(false)}
+        href={primaryLink}
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
         target="_blank"
+        rel="noreferrer"
         data-cursor={"disable"}
       >
-        {props.link && (
+        {primaryLink && (
           <div className="work-link">
             <MdArrowOutward />
           </div>
         )}
-        <img src={props.image} alt={props.alt} />
-        {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
+        {images.map((image, index) => (
+          <img
+            className={index === activeImage ? "is-active" : ""}
+            src={image}
+            alt={props.alt}
+            key={image}
+          />
+        ))}
       </a>
     </div>
   );

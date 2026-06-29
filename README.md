@@ -1,65 +1,59 @@
-# My Portfolio Website - Overview 🚀
+# Mohamed Ahmed Khriji - Portfolio
 
-This repository contains the open-source version of my personal portfolio website.  
-Feel free to explore the code and use it for learning and inspiration.
+Personal portfolio for Mohamed Ahmed Khriji, a Product Manager, founder, and IT consultant focused on B2B SaaS, software delivery, and workflow automation.
 
----
+The site presents my background, selected projects, career experience, technical stack, and contact links in a multilingual interactive experience.
 
-## ⚠️ Usage Notice
+## About Me
 
-This project is shared for learning purposes only.
+I help companies turn ambiguous product and operational problems into shipped software and scalable systems. My work combines product strategy, hands-on technical delivery, and process automation.
 
-Please do NOT:
-- Clone or replicate the full website or design
-- Repost it with minor content changes
-- Use this project for commercial/client work
-- Create tutorials or content using this exact project
+Highlights featured in the portfolio:
 
-If you use parts of the code, you must provide proper credit linking back to the original repository.
+- Founder and Product Manager of Repset, a live gym-management SaaS platform.
+- CEO and Project Manager at Madinah Innovators, a software delivery studio serving B2B clients across multiple countries.
+- Software engineering experience building Clevory, a cross-platform e-learning app.
+- IT consulting and automation work using Make, n8n, and custom workflow design.
 
-Build your own version — don’t just copy.
+## Featured Work
 
-— Moncy Yohannan
+- Repset: Gym management SaaS covering session booking, membership tracking, and coach scheduling.
+- Madinah Innovators: Software delivery studio with improved sprint cadence, delivery tracking, and client operations.
+- Clevory: Cross-platform e-learning app for university and corporate training.
+- Workflow Automation: Client operations automation using Make, n8n, and process design.
 
----
+## Tech Stack
 
-## 🛠️ Instructions
+React, TypeScript, Vite, GSAP, Three.js, WebGL, HTML, CSS, JavaScript, Firebase, Node.js, SQL, Flutter, Make, n8n, and DigitalOcean CI/CD.
 
-I have modified the GSAP Club plugins using trial versions.  
-⚠️ Note: Trial plugins cannot be used for production or hosting.
+## Project Features
 
-For official GSAP Club plugins, refer here:  
-https://gsap.com/docs/v3/Installation/
+- Multilingual content in English, French, and German.
+- Interactive animated landing page.
+- Horizontal work showcase with project metrics, tags, and screenshot hover previews.
+- Responsive layout for desktop and mobile.
+- Project links and social links for Repset.
 
----
+## Local Development
 
-## ⚙️ Tech Stack
+Install dependencies:
 
-React • TypeScript • GSAP • Three.js • WebGL • HTML • CSS • JavaScript
+```bash
+npm install
+```
 
----
+Run the development server:
 
-## 🎨 Assets Usage
+```bash
+npm run dev
+```
 
-Some 3D assets included in this repository are free to use for learning purposes.
+Create a production build:
 
-However:
+```bash
+npm run build
+```
 
-- The original 3D avatar used on my live portfolio is NOT included in this repository
-- That avatar is a custom asset created over ~1 month
-- It is not open source and not available for reuse
+## License
 
-Any usage, extraction, or redistribution of that avatar from my live website is strictly prohibited.
-
----
-
-![Protfolio-Preview](https://github.com/user-attachments/assets/3c4557e7-6392-4928-b8a9-7b2476ef4edd)
-
----
-
-## 📄 License
-
-This project is licensed under the Personal Portfolio License (PPL) v1.0.
-
-See the LICENSE file for full details
-
+This portfolio is a personal project. The source code, copy, images, and visual identity are not intended for direct reuse as another portfolio without permission.
