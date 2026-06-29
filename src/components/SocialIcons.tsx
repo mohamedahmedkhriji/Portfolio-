@@ -9,6 +9,7 @@ import { TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
 import HoverLinks from "./HoverLinks";
 import { useLanguage } from "../context/LanguageProvider";
+import resumePdf from "../../assets/_Khriji_Mohamed_Ahmed_PM__.pdf";
 
 const CALENDLY_URL = "https://calendly.com/khrijimohamedahmed";
 
@@ -122,7 +123,13 @@ const SocialIcons = () => {
           </a>
         </span>
       </div>
-      <a className="resume-button" href="/Khriji_Mohamed_Ahmed_PM_v5__.pdf">
+      <a
+        className="resume-button"
+        href={resumePdf}
+        target="_blank"
+        rel="noreferrer"
+        type="application/pdf"
+      >
         <HoverLinks text={t.social.resume} />
         <span>
           <TbNotes />
