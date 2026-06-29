@@ -5,23 +5,23 @@ import { useLoading } from "../context/LoadingProvider";
 
 import Marquee from "react-fast-marquee";
 
-const logoItems = [
-  { name: "Agile", file: "agile.png" },
-  { name: "Anaconda", file: "anaconda.png" },
-  { name: "Angular", file: "angular.png" },
-  { name: "Firebase", file: "firebase.webp" },
-  { name: "Flutter", file: "flutter.jpg" },
-  { name: "Jira", file: "jira.jpg" },
-  { name: "MongoDB", file: "mongo.jpg" },
-  { name: "MySQL", file: "mysql.jpg" },
-  { name: "Node.js", file: "node.jpg" },
-  { name: "Power BI", file: "powerbi.jpg" },
-  { name: "Python", file: "python.png" },
-  { name: "React", file: "react.png" },
-].map((logo) => ({
-  ...logo,
-  src: new URL(`../../assets/logos/${logo.file}`, import.meta.url).href,
-}));
+const logoModules = import.meta.glob("../../assets/logos/*.{png,jpg,jpeg,webp,svg}", {
+  eager: true,
+  import: "default",
+  query: "?url",
+}) as Record<string, string>;
+
+const logoItems = Object.entries(logoModules)
+  .sort(([pathA], [pathB]) => pathA.localeCompare(pathB))
+  .map(([path, src]) => {
+    const fileName = path.split("/").pop() ?? "Logo";
+    const name = fileName
+      .replace(/\.[^.]+$/, "")
+      .replace(/[-_]+/g, " ")
+      .replace(/\b\w/g, (letter) => letter.toUpperCase());
+
+    return { name, src };
+  });
 
 const marqueeLogos = [...logoItems, ...logoItems];
 
@@ -104,15 +104,26 @@ const Loading = ({ percent }: { percent: number }) => {
       </div>
       <div className="loading-screen">
         <div className="brand-section-area logo-strip">
-          <div className="marquee-wrap">
-            <Marquee className="marquee-text" speed={42} gradient={false}>
-              {marqueeLogos.map((logo, index) => (
-                <div className="brand-single-box" key={`${logo.name}-${index}`}>
-                  <img className="logo-icon mx-6" src={logo.src} alt={logo.name} />
-                </div>
-              ))}
-            </Marquee>
-          </div>
+          {[
+            { className: "logo-strip-row-top", speed: 36, direction: "right" },
+            { className: "logo-strip-row-middle", speed: 42 },
+            { className: "logo-strip-row-bottom", speed: 30, direction: "right" },
+          ].map((row) => (
+            <div className={`marquee-wrap ${row.className}`} key={row.className}>
+              <Marquee
+                className="marquee-text"
+                speed={row.speed}
+                direction={row.direction as "left" | "right" | undefined}
+                gradient={false}
+              >
+                {marqueeLogos.map((logo, index) => (
+                  <div className="brand-single-box" key={`${row.className}-${logo.name}-${index}`}>
+                    <img className="logo-icon mx-6" src={logo.src} alt={logo.name} />
+                  </div>
+                ))}
+              </Marquee>
+            </div>
+          ))}
         </div>
         <div
           className={`loading-wrap ${clicked && "loading-clicked"}`}

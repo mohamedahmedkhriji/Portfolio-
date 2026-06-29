@@ -281,11 +281,41 @@
   transform: translateY(-50%);
   pointer-events: none;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6px, 1.4vw, 18px);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 18%,
+    #000 72%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 18%,
+    #000 72%,
+    transparent
+  );
 }
 
 .marquee-wrap {
   width: 100%;
   overflow: hidden;
+}
+
+.logo-strip-row-top {
+  opacity: 0.62;
+}
+
+.logo-strip-row-middle {
+  opacity: 0.48;
+}
+
+.logo-strip-row-bottom {
+  opacity: 0.24;
+  filter: blur(0.4px);
 }
 
 .marquee-text {
@@ -300,6 +330,7 @@
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
+  background: transparent;
 }
 
 .logo-icon {
@@ -309,6 +340,8 @@
   height: auto;
   object-fit: contain;
   display: block;
+  background: transparent;
+  mix-blend-mode: multiply;
 }
 
 .mx-6 {
