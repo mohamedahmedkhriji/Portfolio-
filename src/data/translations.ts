@@ -31,7 +31,7 @@ export const translations = {
     },
     about: {
       title: "About Me",
-      body: "Product Manager and IT Consultant with a proven 0-to-1 track record across B2B SaaS, digital transformation, and technology advisory. I help companies turn ambiguous problems into shipped products and scalable systems, combining strategic product thinking with hands-on technical depth. As founder of Repset, I took a gym-management platform from zero to live in under 3 months with 3 paying partners, 68% D60 retention, and zero marketing spend. As CEO of a 6-person studio, I delivered 10+ B2B mandates across 6 countries, cutting cycle time 30% and raising on-time delivery from 60% to 80%. On the consulting side, I advise IT companies on product strategy, process automation with Make and n8n, and software delivery, whether embedded as a fractional PM or brought in for a focused engagement.",
+      body: "I am a results-driven Project Manager with experience leading cross-functional teams and delivering projects from planning to execution. I specialize in building efficient workflows, improving team communication, and optimizing business operations for growing companies. I manage international B2B client relationships, ensuring clear communication and successful project delivery across different time zones and cultures. My expertise includes coordinating multiple departments, solving complex client challenges, hiring and onboarding top talent, and fostering high-performing teams. I adapt quickly to new industries, company cultures, and business environments, allowing me to integrate seamlessly into any organization. With a proactive mindset, strong leadership, and a focus on continuous improvement, I help businesses streamline operations, increase productivity, and achieve their strategic goals while consistently delivering high-quality results.",
     },
     what: {
       titlePrefix: "W",
@@ -43,7 +43,7 @@ export const translations = {
       cards: [
         {
           title: "PRODUCT",
-          body: "I turn ambiguous B2B problems into scoped product bets, roadmaps, MVPs, and release plans that teams can actually ship.",
+          body: "I help businesses turn ideas into successful products by managing the product lifecycle from planning to launch. I collaborate with cross-functional teams and stakeholders to define priorities, deliver high-quality solutions, and improve user experience. My focus is on aligning product strategy with business goals while driving innovation, efficiency, and measurable results.",
           tags: [
             "Agile",
             "Scrum",
@@ -57,7 +57,7 @@ export const translations = {
         },
         {
           title: "BUILD",
-          body: "I code directly with engineering teams, which keeps delivery tight and removes the hand-off layer between product and build.",
+          body: "I build scalable workflows, high-performing teams, and efficient business processes that drive growth. I develop project management systems, optimize operations, and implement collaboration frameworks that improve productivity. My goal is to create sustainable solutions that help businesses scale efficiently and deliver lasting value.",
           tags: [
             "React",
             "Node.js",
@@ -70,8 +70,8 @@ export const translations = {
           ],
         },
         {
-          title: "OPERATE",
-          body: "I have founded, hired for, and managed software delivery operations, from compliance to sprint cadences and client communication.",
+          title: "OPERATION",
+          body: "I operate and optimize business operations by streamlining workflows, improving team collaboration, and ensuring projects run efficiently. I coordinate cross-functional teams, manage client relationships, solve operational challenges, and drive continuous improvement to help businesses achieve their strategic goals.",
           tags: [
             "Hiring",
             "Team Management",
@@ -208,7 +208,7 @@ export const translations = {
     },
     about: {
       title: "À propos de moi",
-      body: "Chef de Produit et Consultant IT avec un parcours prouvé de 0 à 1 en B2B SaaS, transformation digitale et conseil technologique. J'aide les entreprises à transformer des problèmes flous en produits livrés et systèmes scalables, en alliant vision stratégique et expertise technique. En tant que fondateur de Repset, j'ai lancé une plateforme de gestion de salles de sport en moins de 3 mois avec 3 partenaires payants, 68% de rétention D60 et zéro budget marketing. En tant que CEO d'un studio de 6 personnes, j'ai livré 10+ mandats B2B dans 6 pays, réduisant le cycle de 30% et faisant passer la livraison à temps de 60% à 80%. En consulting, je conseille les entreprises IT sur la stratégie produit, l'automatisation avec Make et n8n, et la livraison logicielle, en tant que PM fractionné ou pour des missions ciblées.",
+      body: "Je suis un Project Manager orienté résultats, avec de l'expérience dans la direction d'équipes transverses et la livraison de projets, de la planification à l'exécution. Je suis spécialisé dans la création de workflows efficaces, l'amélioration de la communication d'équipe et l'optimisation des opérations pour les entreprises en croissance. Je gère des relations clients B2B internationales en assurant une communication claire et une livraison réussie entre différents fuseaux horaires et cultures. Mon expertise inclut la coordination de plusieurs départements, la résolution de défis clients complexes, le recrutement et l'onboarding de talents, ainsi que le développement d'équipes performantes. Je m'adapte rapidement aux nouveaux secteurs, cultures d'entreprise et environnements business, ce qui me permet de m'intégrer facilement dans toute organisation. Avec un état d'esprit proactif, un leadership solide et une attention constante à l'amélioration continue, j'aide les entreprises à fluidifier leurs opérations, augmenter leur productivité et atteindre leurs objectifs stratégiques tout en livrant des résultats de haute qualité.",
     },
     what: {
       titlePrefix: "C",
@@ -220,7 +220,7 @@ export const translations = {
       cards: [
         {
           title: "PRODUIT",
-          body: "Je transforme des problèmes B2B ambigus en paris produit cadrés, roadmaps, MVP et plans de lancement que les équipes peuvent réellement livrer.",
+          body: "J'aide les entreprises à transformer leurs idées en produits performants en gérant le cycle de vie produit, de la planification au lancement. Je collabore avec des équipes transverses et des parties prenantes pour définir les priorités, livrer des solutions de qualité et améliorer l'expérience utilisateur. Mon objectif est d'aligner la stratégie produit avec les objectifs business tout en stimulant l'innovation, l'efficacité et des résultats mesurables.",
           tags: [
             "Agile",
             "Scrum",
@@ -234,7 +234,7 @@ export const translations = {
         },
         {
           title: "BUILD",
-          body: "Je code directement avec les équipes engineering, ce qui resserre la livraison et supprime la couche de hand-off entre produit et développement.",
+          body: "Je construis des workflows scalables, des équipes performantes et des processus business efficaces qui soutiennent la croissance. Je développe des systèmes de gestion de projet, j'optimise les opérations et je mets en place des cadres de collaboration qui améliorent la productivité. Mon objectif est de créer des solutions durables qui aident les entreprises à scaler efficacement et à générer une valeur durable.",
           tags: [
             "React",
             "Node.js",
@@ -247,8 +247,8 @@ export const translations = {
           ],
         },
         {
-          title: "OPÉRER",
-          body: "J'ai fondé, recruté et piloté des opérations de livraison logicielle, de la conformité aux cadences de sprint et à la communication client.",
+          title: "OPÉRATION",
+          body: "Je pilote et optimise les opérations business en fluidifiant les workflows, en améliorant la collaboration d'équipe et en veillant à ce que les projets avancent efficacement. Je coordonne des équipes transverses, gère les relations clients, résous les défis opérationnels et mène l'amélioration continue pour aider les entreprises à atteindre leurs objectifs stratégiques.",
           tags: [
             "Recrutement",
             "Gestion d'équipe",
@@ -385,7 +385,7 @@ export const translations = {
     },
     about: {
       title: "Über mich",
-      body: "Product Manager und IT-Berater mit nachgewiesener 0-zu-1-Erfolgsbilanz in B2B-SaaS, digitaler Transformation und Technologieberatung. Ich helfe Unternehmen, unklare Probleme in gelieferte Produkte und skalierbare Systeme zu verwandeln, indem ich strategisches Produktdenken mit technischer Umsetzungstiefe verbinde. Als Gründer von Repset brachte ich eine Gym-Management-Plattform in unter 3 Monaten live, mit 3 zahlenden Partnern, 68% D60-Retention und null Marketingausgaben. Als CEO eines 6-köpfigen Studios lieferte ich 10+ B2B-Mandate in 6 Ländern, reduzierte die Durchlaufzeit um 30% und steigerte die pünktliche Lieferung von 60% auf 80%. Auf der Beratungsseite unterstütze ich IT-Unternehmen in Produktstrategie, Prozessautomatisierung mit Make und n8n sowie Software-Lieferung, ob als Fractional PM oder für gezielte Einsätze.",
+      body: "Ich bin ein ergebnisorientierter Project Manager mit Erfahrung in der Führung funktionsübergreifender Teams und der Umsetzung von Projekten von der Planung bis zur Ausführung. Ich spezialisiere mich auf den Aufbau effizienter Workflows, die Verbesserung der Teamkommunikation und die Optimierung von Geschäftsprozessen für wachsende Unternehmen. Ich betreue internationale B2B-Kundenbeziehungen und sorge für klare Kommunikation sowie erfolgreiche Projektlieferung über verschiedene Zeitzonen und Kulturen hinweg. Zu meiner Expertise gehören die Koordination mehrerer Abteilungen, die Lösung komplexer Kundenherausforderungen, Recruiting und Onboarding starker Talente sowie der Aufbau leistungsfähiger Teams. Ich passe mich schnell an neue Branchen, Unternehmenskulturen und Geschäftsumfelder an und kann mich dadurch nahtlos in jede Organisation integrieren. Mit einer proaktiven Denkweise, starker Führung und Fokus auf kontinuierliche Verbesserung helfe ich Unternehmen, Abläufe zu optimieren, Produktivität zu steigern und strategische Ziele zu erreichen, während ich konstant hochwertige Ergebnisse liefere.",
     },
     what: {
       titlePrefix: "W",
@@ -397,7 +397,7 @@ export const translations = {
       cards: [
         {
           title: "PRODUCT",
-          body: "Ich bringe Produkte von null auf eins, indem ich vage Ideen in definierte MVPs, validierte Roadmaps und messbare Ergebnisse verwandle.",
+          body: "Ich helfe Unternehmen, Ideen in erfolgreiche Produkte zu verwandeln, indem ich den Produktlebenszyklus von der Planung bis zum Launch steuere. Ich arbeite mit funktionsübergreifenden Teams und Stakeholdern zusammen, um Prioritäten zu definieren, hochwertige Lösungen zu liefern und die User Experience zu verbessern. Mein Fokus liegt darauf, Produktstrategie mit Geschäftszielen zu verbinden und gleichzeitig Innovation, Effizienz und messbare Ergebnisse voranzutreiben.",
           tags: [
             "Agile",
             "Scrum",
@@ -411,7 +411,7 @@ export const translations = {
         },
         {
           title: "ENTWICKLUNG",
-          body: "Ich baue und liefere Software direkt, von Full-Stack-Webanwendungen über mobile Apps bis zu Automatisierungs-Workflows.",
+          body: "Ich baue skalierbare Workflows, leistungsstarke Teams und effiziente Geschäftsprozesse auf, die Wachstum fördern. Ich entwickle Projektmanagement-Systeme, optimiere Abläufe und implementiere Kollaborationsstrukturen, die Produktivität verbessern. Mein Ziel ist es, nachhaltige Lösungen zu schaffen, mit denen Unternehmen effizient skalieren und langfristigen Mehrwert liefern können.",
           tags: [
             "React",
             "Node.js",
@@ -425,7 +425,7 @@ export const translations = {
         },
         {
           title: "BETRIEB",
-          body: "Ich berate IT-Unternehmen zu Lieferleistung, Prozessautomatisierung und Teameffizienz, damit Teams Durchlaufzeiten reduzieren und operative Reibung beseitigen.",
+          body: "Ich betreibe und optimiere Geschäftsabläufe, indem ich Workflows verschlanke, Teamzusammenarbeit verbessere und sicherstelle, dass Projekte effizient laufen. Ich koordiniere funktionsübergreifende Teams, betreue Kundenbeziehungen, löse operative Herausforderungen und treibe kontinuierliche Verbesserung voran, damit Unternehmen ihre strategischen Ziele erreichen.",
           tags: [
             "IT Consulting",
             "Prozessautomatisierung",

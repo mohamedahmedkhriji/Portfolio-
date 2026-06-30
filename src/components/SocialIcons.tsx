@@ -9,7 +9,7 @@ import { TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
 import HoverLinks from "./HoverLinks";
 import { useLanguage } from "../context/LanguageProvider";
-import resumePdf from "../../assets/_Khriji_Mohamed_Ahmed_PM__.pdf";
+import resumePdf from "../../assets/Khriji_Mohamed_Ahmed_PM___.pdf";
 
 const CALENDLY_URL = "https://calendly.com/khrijimohamedahmed";
 

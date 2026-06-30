@@ -5,6 +5,8 @@ import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { useLanguage } from "../context/LanguageProvider";
 import { languages } from "../data/translations";
+import { TbNotes } from "react-icons/tb";
+import resumePdf from "../../assets/Khriji_Mohamed_Ahmed_PM___.pdf";
 import "./styles/Navbar.css";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
@@ -35,7 +37,7 @@ const Navbar = () => {
     smoother.scrollTop(0);
     smoother.paused(true);
 
-    const links = document.querySelectorAll(".header > ul a");
+    const links = document.querySelectorAll(".header > ul a[data-href]");
     links.forEach((elem) => {
       const element = elem as HTMLAnchorElement;
       element.addEventListener("click", (e) => {
@@ -43,7 +45,9 @@ const Navbar = () => {
           e.preventDefault();
           const elem = e.currentTarget as HTMLAnchorElement;
           const section = elem.getAttribute("data-href");
-          smoother.scrollTo(section, true, "top top");
+          if (section) {
+            smoother.scrollTo(section, true, "top top");
+          }
         }
       });
     });
@@ -115,6 +119,18 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
+        <a
+          className="resume-button nav-resume-button"
+          href={resumePdf}
+          target="_blank"
+          rel="noreferrer"
+          type="application/pdf"
+        >
+          <HoverLinks text={t.social.resume} />
+          <span>
+            <TbNotes />
+          </span>
+        </a>
       </div>
 
       <div className="landing-circle1"></div>

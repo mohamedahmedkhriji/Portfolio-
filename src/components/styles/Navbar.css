@@ -3,6 +3,8 @@
   max-width: var(--cMaxWidth);
   width: var(--cWidth);
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
   padding: 20px 0px;
   margin-bottom: -100px;
   box-sizing: border-box;
@@ -22,6 +24,7 @@
   column-gap: 40px;
   row-gap: 8px;
   align-items: end;
+  margin-left: auto;
 }
 .header > ul li {
   margin-left: 0px;
@@ -95,9 +98,34 @@
 .language-menu button:hover {
   background-color: rgba(234, 229, 236, 0.1);
 }
+
+.header .nav-resume-button {
+  position: static;
+  display: flex;
+  min-width: fit-content;
+  align-items: center;
+  gap: 8px;
+  bottom: auto;
+  right: auto;
+  color: #eae5ec;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1;
+  transform: none;
+}
+
+.header .nav-resume-button span {
+  display: inline-flex;
+  align-items: center;
+  color: #eae5ec;
+  font-size: 15px;
+}
+
 @media only screen and (min-width: 500px) {
   .header {
     padding: 20px 0px;
+    align-items: center;
   }
   .header > ul {
     flex-direction: row;
@@ -114,6 +142,10 @@
   }
   .header > ul {
     column-gap: 80px;
+    font-size: 16px;
+  }
+
+  .header .nav-resume-button {
     font-size: 16px;
   }
 
