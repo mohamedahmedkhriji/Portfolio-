@@ -20,6 +20,7 @@ export const translations = {
     },
     social: {
       certifications: "CERTIFICATIONS",
+      resume: "RESUME",
       calendly: "Schedule a meeting on Calendly",
     },
     landing: {
@@ -197,6 +198,7 @@ export const translations = {
     },
     social: {
       certifications: "CERTIFICATIONS",
+      resume: "RESUME",
       calendly: "Planifier un rendez-vous sur Calendly",
     },
     landing: {
@@ -374,6 +376,7 @@ export const translations = {
     },
     social: {
       certifications: "ZERTIFIKATE",
+      resume: "RESUME",
       calendly: "Termin über Calendly buchen",
     },
     landing: {

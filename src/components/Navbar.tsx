@@ -5,7 +5,8 @@ import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { useLanguage } from "../context/LanguageProvider";
 import { languages } from "../data/translations";
-import CertificationsMenu from "./CertificationsMenu";
+import { TbNotes } from "react-icons/tb";
+import resumePdf from "../../assets/Khriji_Mohamed_Ahmed_PM___.pdf";
 import "./styles/Navbar.css";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
@@ -118,7 +119,18 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-        <CertificationsMenu buttonClassName="nav-resume-button" />
+        <a
+          className="resume-button nav-resume-button"
+          href={resumePdf}
+          target="_blank"
+          rel="noreferrer"
+          type="application/pdf"
+        >
+          <HoverLinks text={t.social.resume} />
+          <span>
+            <TbNotes />
+          </span>
+        </a>
       </div>
 
       <div className="landing-circle1"></div>
