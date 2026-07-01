@@ -6,22 +6,25 @@ import "./styles/CertificationsMenu.css";
 
 type CertificationsMenuProps = {
   buttonClassName?: string;
+  buttonLabel?: string;
 };
 
 const CertificationsMenu = ({
   buttonClassName = "",
+  buttonLabel,
 }: CertificationsMenuProps) => {
   const { t } = useLanguage();
+  const label = buttonLabel ?? t.social.certifications;
 
   return (
     <div className="certifications-control">
       <button
         className={`resume-button ${buttonClassName}`.trim()}
         type="button"
-        aria-label={t.social.certifications}
+        aria-label={label}
         data-cursor="disable"
       >
-        <HoverLinks text={t.social.certifications} />
+        <HoverLinks text={label} />
         <span>
           <TbCertificate />
         </span>

@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { useLanguage } from "../context/LanguageProvider";
 import { languages } from "../data/translations";
+import CertificationsMenu from "./CertificationsMenu";
 import { TbNotes } from "react-icons/tb";
 import resumePdf from "../../assets/Khriji_Mohamed_Ahmed_PM___.pdf";
 import "./styles/Navbar.css";
@@ -117,6 +118,9 @@ const Navbar = () => {
             <a data-href="#contact" href="#contact">
               <HoverLinks text={t.nav.contact} />
             </a>
+          </li>
+          <li>
+            <CertificationsMenu buttonClassName="nav-certification-button" buttonLabel={t.nav.certifications} />
           </li>
         </ul>
         <a
