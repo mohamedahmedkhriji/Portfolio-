@@ -19,7 +19,7 @@ export const translations = {
       chooseLanguage: "Choose language",
     },
     social: {
-      resume: "RESUME",
+      certifications: "CERTIFICATIONS",
       calendly: "Schedule a meeting on Calendly",
     },
     landing: {
@@ -196,7 +196,7 @@ export const translations = {
       chooseLanguage: "Choisir la langue",
     },
     social: {
-      resume: "CV",
+      certifications: "CERTIFICATIONS",
       calendly: "Planifier un rendez-vous sur Calendly",
     },
     landing: {
@@ -373,7 +373,7 @@ export const translations = {
       chooseLanguage: "Sprache wählen",
     },
     social: {
-      resume: "CV",
+      certifications: "ZERTIFIKATE",
       calendly: "Termin über Calendly buchen",
     },
     landing: {
